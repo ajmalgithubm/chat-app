@@ -3,15 +3,16 @@ import {getFirestore} from 'firebase/firestore';
 import {getAuth} from 'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCBHggc8ie4we0ubRoOuqSi-z664Quet_s",
-    authDomain: "live-chat-9bee0.firebaseapp.com",
-    projectId: "live-chat-9bee0",
-    storageBucket: "live-chat-9bee0.appspot.com",
-    messagingSenderId: "57444527834",
-    appId: "1:57444527834:web:78172ea240cbab373bbfe3",
-    measurementId: "G-PBNW15T8SM"
+    apiKey: "AIzaSyAIOBcJk379yYAl7b7yGzmMXCckwW4B82E",
+    authDomain: "real-time-chat-app-a5747.firebaseapp.com",
+    projectId: "real-time-chat-app-a5747",
+    storageBucket: "real-time-chat-app-a5747.appspot.com",
+    messagingSenderId: "436141886842",
+    appId: "1:436141886842:web:52ac60c52a45e66a7e5ac3",
+    measurementId: "G-NM4GWMZYZ7"
 };
 
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(firebaseConfig);
-export const db = getFirestore(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+export {auth, db};
