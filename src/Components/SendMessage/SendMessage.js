@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SendMessage.css';
+import {db} from '../../Firebase';
+import { addDoc, collection } from 'firebase/firestore';
+import { useContext } from 'react';
+import { userContext } from '../../App';
 function SendMessage() {
+  const [message, setMessage] = useState('');
+  const {user} = useContext(userContext);
+  const addMessage = async () => {
+    await addDoc(collection(db, 'messages'), {
+      text:message,
+      id:user.uid,
+      name: user.displayName,
+      avatar:user.photoURL
+    })
+  }
   return (
     <div>
       <div className="send-message">
         <div className="send-message-input">
-            <input type="text" placeholder='text the messages...'/>
+            <input type="text" placeholder='text the messages...' onChange={(e) => setMessage(e.target.value)}/>
         </div>
         <div className="send-message-btn">
-            <button>Send</button>
+            <button onClick={addMessage}>Send</button>
         </div>
       </div>
     </div>
