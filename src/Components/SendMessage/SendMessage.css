@@ -2,15 +2,22 @@
     display: flex;
     justify-content: space-between;
     background-color: rgb(9, 41, 88);
-    padding: 10px 20px;
+    padding: 10px 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    /* Ensures padding and border are included in the width calculation */
 }
 
 .send-message-input {
-    width: 90%;
+    flex-grow: 1;
+    padding: 0 10px;
 }
 
 .send-message-input input {
-    width: 100%;
+    width: 94%;
     padding: 10px;
     border-radius: 12px;
     border: none;
@@ -24,10 +31,21 @@
     border: none;
     padding: 9px 18px;
     background-color: rgb(255, 255, 255);
-    color: rgb(5, 5, 5);
+    color: rgb(0, 0, 0);
     font-weight: 600;
     border-radius: 11px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-shadow: 0 0 0px white;
     cursor: pointer;
+    background-color: rgb(255, 250, 250);
+}
+
+/* Media query for smaller screens */
+/* Other CSS styles here */
+
+/* Media query for screens with a width of 400 pixels or less */
+@media (max-width: 30px) {
+    .message-container {
+        max-width: 100%;
+    }
 }
