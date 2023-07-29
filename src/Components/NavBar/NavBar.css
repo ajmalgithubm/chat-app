@@ -14,13 +14,18 @@
 .sigin-btn button{
     padding: 9px 18px;
     border: none;
-    background-color: rgb(2, 18, 32);
-    color: rgb(245, 238, 238);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-weight: 600;
     border-radius: 11px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 0 3px white;
+    box-shadow: 0 0 2px white;
     cursor: pointer;
+    transition: 2ms;
+}
+.sigin-btn button:hover{
+    transform: scale(1.1);
+    background-color: white;
 }
 .nav-head h2{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
