@@ -87,7 +87,7 @@
     border-radius: 20px;
     border-top-left-radius: 0;
 }
-.main-head-top{
+.main-head-top{  
     display: flex;
     flex-direction: row;
     justify-content: start;
