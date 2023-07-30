@@ -1,17 +1,17 @@
-.nav-bar-container{
+.nav-bar_container_{
     position: fixed;
     top: 0;
     width: 100%;
 }
-.nav-bar{
+.nav-bar_{
     background-color: rgb(9, 41, 88);
     padding: 10px 20px;
     display: flex;
     justify-content:space-between;
-    height: 8vh;
+    height: 12vh;
    
 }
-.sigin-btn button{
+.sigin-btn_ button{
     padding: 9px 18px;
     border: none;
     background-color: rgb(255, 255, 255);
@@ -23,11 +23,11 @@
     cursor: pointer;
     transition: 2ms;
 }
-.sigin-btn button:hover{
+.sigin-btn_ button:hover{
     transform: scale(1.1);
     background-color: white;
 }
-.nav-head h2{
+.nav-head_ h2{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
     opacity: 0.9;

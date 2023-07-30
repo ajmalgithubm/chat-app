@@ -19,12 +19,12 @@ function NavBar() {
     }
   }
   return (
-    <div className='nav-bar-container'>
-      <div className="nav-bar">
-        <div className="nav-head">
+    <div className='nav-bar_container_'>
+      <div className="nav-bar_">
+        <div className="nav-head_">
             <h2>Chat App</h2>
         </div>
-        <div className='sigin-btn'>
+        <div className='sigin-btn_'>
             <button onClick={siginOutUser}>{user ? "Sigout" : "Sigin"}</button>
         </div>
       </div>

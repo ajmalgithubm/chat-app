@@ -8,7 +8,6 @@
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    /* Ensures padding and border are included in the width calculation */
 }
 
 .send-message-input {
@@ -48,4 +47,8 @@
     .message-container {
         max-width: 100%;
     }
+}
+
+#inputTag {
+    display: none;
 }

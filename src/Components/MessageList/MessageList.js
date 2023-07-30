@@ -5,17 +5,6 @@ import { query, collection, orderBy, onSnapshot, limit } from 'firebase/firestor
 import { db } from '../../Firebase';
 function MessageList() {
     const [messageList, setMessageList] = useState([]);
-    useEffect(() => {
-        const scrollDiv = () => {
-            const messageList = document.getElementById('message-list');
-            if (true) {
-                messageList.scrollTop += 10;
-            }
-            console.log("scroll div function is calling");
-        }
-        setInterval(scrollDiv,3000);
-        return () => scrollDiv()
-    }, [])
 useEffect(() => {
     const q = query(
         collection(db, 'messages'),
