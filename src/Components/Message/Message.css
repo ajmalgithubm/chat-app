@@ -20,9 +20,9 @@
     background-color: rgb(186, 187, 186);
     flex-wrap: nowrap;
     max-width: 25%;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 12px;
-    border-radius: 2100px;
+    border-radius: 210px;
     justify-content: flex-start;
     float: right;
     border-bottom-right-radius: 10px;
