@@ -3,18 +3,26 @@ import './Message.css';
 import { useContext, useRef } from 'react';
 import { userContext } from '../../App';
 
-function Message({id, avatar, name,text}) {
-    const {user} = useContext(userContext);
+function Message({ id, avatar, name, text, imageUrl }) {
+
+    const { user } = useContext(userContext);
     return (
         <div>
-            <div className={(user.uid == id)?"message-container-right":"message-container-left"}>
-                <div className="message-profile-photo">
-                    <img width={50} height={50} style={{ borderRadius: '50%' }} src={avatar} alt="" />
-                </div>
-                <div className="name-chat-container">
-                    <div className="name">
+            <div className={(user.uid == id) ? "message-container-right" : "message-container-left"}>
+                <div className="main-head-top">
+                    <div className="message-profile-photo">
+                        <img width={30} height={30} style={{ borderRadius: '50%' }} src={avatar} alt="" />
+                    </div>
+                    <div className="name ml-2">
                         <p>{name}</p>
                     </div>
+                </div>
+                <div className="name-chat-container">
+                    {
+                        imageUrl ? (<div className="name-chat-container-img">
+                            <img src={imageUrl} />
+                        </div>) : ''
+                    }
                     <div className="chat">
                         <p>{text}.</p>
                     </div>

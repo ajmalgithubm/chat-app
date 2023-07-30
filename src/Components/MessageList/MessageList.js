@@ -31,7 +31,7 @@ return (
                 {
                     messageList.map(item => {
                         return (
-                            <Message {...item} />
+                            <Message {...item}  key={item.docId}/>
                         )
                     })
                 }
