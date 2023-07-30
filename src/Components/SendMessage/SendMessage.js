@@ -4,7 +4,7 @@ import {db} from '../../Firebase';
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { useContext } from 'react';
 import { userContext } from '../../App';
-function SendMessage() {
+function SendMessage({scroll}) {
   const [message, setMessage] = useState('');
   const {user} = useContext(userContext);
   const addMessage = async () => {
@@ -19,6 +19,7 @@ function SendMessage() {
       avatar:user.photoURL,
       createdAt : serverTimestamp()
     })
+   
   }
   return (
     <div>

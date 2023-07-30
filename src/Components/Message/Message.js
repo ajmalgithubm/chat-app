@@ -1,7 +1,8 @@
 import React from 'react';
 import './Message.css';
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 import { userContext } from '../../App';
+
 function Message({id, avatar, name,text}) {
     const {user} = useContext(userContext);
     return (
