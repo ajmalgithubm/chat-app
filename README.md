@@ -1,4 +1,3 @@
-A chat app made with React.js allows users to communicate with each other in real-time. It provides functionalities for signing in with Google, sending text messages, and sharing images within the chat. The app is designed to provide a seamless chat experience where users can see messages from others as they are sent, making use of Firebase's onSnapshot function for real-time updates.
 
 Here's a breakdown of the main features and components of a typical chat app built with React.js using Google Sign-In and Firebase's Firestore for real-time chat:
 
