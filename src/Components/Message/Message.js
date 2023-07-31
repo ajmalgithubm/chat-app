@@ -19,12 +19,12 @@ function Message({ id, avatar, name, text, imageUrl }) {
                 </div>
                 <div className="name-chat-container">
                     {
-                        imageUrl ? (<div className="name-chat-container-img">
-                            <img src={imageUrl} />
-                        </div>) : ''
+                        (<div className="name-chat-container-img">
+                            <img src={imageUrl ? imageUrl : ''} />
+                        </div>) 
                     }
                     <div className="chat">
-                        <p>{text}.</p>
+                        <p>{text}</p>
                     </div>
                 </div>
             </div>

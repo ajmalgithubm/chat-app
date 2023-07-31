@@ -11,14 +11,13 @@ function SendMessage({ scroll }) {
 
   const storage = getStorage();
   const [message, setMessage] = useState('');
-  const [imageLink, setImageLink] = useState(null);
+  const [imageLink, setImageLink] = useState();
   const [image, setImage] = useState();
   const { user } = useContext(userContext);
 
   // Message sending into Firebase
   const addMessage = async () => {
     if (message.trim() === '' && !image) {
-      alert('Enter the text');
       return
     }
     await addDoc(collection(db, 'messages'), {
@@ -30,10 +29,16 @@ function SendMessage({ scroll }) {
       createdAt: serverTimestamp(),
     })
     document.getElementById('inputTextTag').value = '';
+    setMessage('');
+    setImage(null);
 
   }
   useEffect(()=> {
+    const myModal = document.getElementById("myModal");
+    myModal.classList.add("show");
+    myModal.style.display = "none";
     addMessage();
+    console.log('UseEffect for the ImageLink is Running....');
   },[imageLink])
 
   return (
@@ -72,13 +77,9 @@ function SendMessage({ scroll }) {
                   getDownloadURL(snapshot.ref).then((url) => {
                     setImageLink(url);
                     console.log("image Link is ", url);
+                    console.log("image Link is", imageLink)
                   })
                 })
-                console.log("image Link is", imageLink)
-                const myModal = document.getElementById("myModal");
-                myModal.classList.add("show");
-                myModal.style.display = "none";
-                setImage(null)
               }}>Send</button>
             </div>
           </div>
@@ -106,7 +107,6 @@ function SendMessage({ scroll }) {
         <div className="send-message-btn">
           <button onClick={
             () => {
-              setImage(null);
               addMessage();
             }
           }>Send</button>
